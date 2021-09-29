@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/GColville/FAQ-Accordion-Challenge
+- Live Site URL: https://gcolville.github.io/FAQ-Accordion-Challenge/
 
 ## My process
 
