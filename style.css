@@ -119,7 +119,7 @@ body {
     height: 15px;
 }
 
-@media(min-width: 1649px) {
+@media(min-width: 1280px) {
     .content-container {
         position: relative;
         flex-direction: row;
