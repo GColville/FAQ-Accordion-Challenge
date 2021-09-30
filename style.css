@@ -13,6 +13,7 @@
 * {
     margin: 0;
     padding: 0;
+    /* box-sizing: border-box; */
 }
 
 body {
@@ -20,146 +21,79 @@ body {
     font-family: var(--font-family);
     overflow-x: hidden;
     background: linear-gradient(to bottom, var(--soft-violet), var(--soft-blue));
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-}
-
-.content-container {
-    background-color: #fff;
-    width: 330px;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
-    margin: 150px auto;
+}
+
+.question-container {
+    background-color: #fff;
+    /* height: 600px; */
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 8rem auto;
+    position: relative;
     border-radius: 20px;
-    position: relative;
 }
 
-.image-container {
-    height: 200px;
-    width: 270px;
-    position: relative;
-    top: -105px;
-    left: 20px;
-}
-
-.bg-img {
-    background-image: url('images/bg-pattern-mobile.svg');
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 100px;
-    left: 30px;
-    height: 200px;
-    width: 270px;
-    z-index: 10;
-}
-
-.woman-img {
+.question-container::before {
+    content: " ";
     background-image: url('images/illustration-woman-online-mobile.svg');
     background-repeat: no-repeat;
-    height: 200px;
     width: 270px;
+    height: 190px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-55%, -55%);
 }
 
-.faq-container {
-    margin-left: 20px;
-    margin-right: 40px;
-    margin-bottom: 60px;
+.question-container::after {
+    content: " ";
+    background-image: url('images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 190px;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    /* transform: translate(-45%, -55%); */
+}
+
+.questions {
+    background-color: pink;
+    padding: 8rem 0.5rem 1.5rem;
+    font-size: 12px;
 }
 
 .faq-title {
-    margin: -80px 0 30px;
+    font-size: 30px;
     text-align: center;
-    font-size: 32px;
+    padding-bottom: 1.5rem;
 }
 
-.faq {
-    border-bottom: 1px solid var(--light-gray-blue);
-    position: relative;
-    max-width: 100%;
-    transition: 0.3s ease;
-}
-
-.faq h2 {
-    font-size: 14px;
+.question {
     font-weight: 400;
-    margin: 20px 0;
-    color: var(--dark-gray-blue);
 }
 
-.faq.visible h2 {
-    color: black;
-    font-weight: 700;
+.question-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
-.faq-answer {
-    display: none;
-    padding: 0 0px 10px 0;
-    font-size: 12px;
-    color: var(--dark-gray-blue);
-    transition: 0.3s ease;
+.q-title-text {
+    font-size: 14px;
 }
 
-.faq.visible .faq-answer {
-    display: block;
-}
-
-.toggle-btn {
-    background-image: url('images/icon-arrow-down.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
+.q-btn {
     background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    position: absolute;
-    top: 5px;
-    right: -20px;
-    width: 15px;
-    height: 15px;
+    border: none;
 }
 
-@media(min-width: 1280px) {
-    .content-container {
-        position: relative;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 60%;
-        overflow: hidden;
-    }
-    .image-container {
-        position: static;
-        width: 50%;
-        height: 100%;
-        display: flex;
-    }
-    .bg-img {
-        background-image: url('images/bg-pattern-desktop.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        position: absolute;
-        top: -250px;
-        left: -410px;
-        height: 800px;
-        width: 1200px;
-    }
-    .woman-img {
-        background-image: url('images/illustration-woman-online-desktop.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 350px;
-        width: 650px;
-        position: absolute;
-        top: 40px;
-        left: -50px;
-    }
-    .faq-container {
-        width: 50%;
-        padding-right: 50px;
-    }
-    .faq-title {
-        margin-top: 20px;
-        text-align: left;
-    }
-}
+.q-text {}
