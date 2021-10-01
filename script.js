@@ -17,11 +17,11 @@ const qText3 = document.querySelector('.q-text-3');
 const qText4 = document.querySelector('.q-text-4');
 const qText5 = document.querySelector('.q-text-5');
 
-btn1.addEventListener('click', () => { qText1.classList.toggle('visible') });
-btn2.addEventListener('click', () => { qText2.classList.toggle('visible') });
-btn3.addEventListener('click', () => { qText3.classList.toggle('visible') });
-btn4.addEventListener('click', () => { qText4.classList.toggle('visible') });
-btn5.addEventListener('click', () => { qText5.classList.toggle('visible') });
+btn1.addEventListener('click', () => { qText1.classList.toggle('active') });
+btn2.addEventListener('click', () => { qText2.classList.toggle('active') });
+btn3.addEventListener('click', () => { qText3.classList.toggle('active') });
+btn4.addEventListener('click', () => { qText4.classList.toggle('active') });
+btn5.addEventListener('click', () => { qText5.classList.toggle('active') });
 
 // function toggleVisible() {
 //     qText1.classList.toggle('visible');
